@@ -1,0 +1,14 @@
+[Unit]
+Description=Start x11vnc at startup.
+After=multi-user.target home.mount
+
+[Service]
+Type=simple
+ExecStartPre=/bin/bash -c "/bin/systemctl set-environment AUTH_FILE=$(find /var/run/sddm/ -type f)"
+ExecStart=/usr/local/bin/x11vnc -auth ${AUTH_FILE} -forever -noxdamage -repeat -rfbauth /home/ical/.vnc/passwd -rfbport 59901 -shared
+Restart=always
+RestartSec=5
+
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Establish port 22 to a reverse tunnel on ical190
+After=NetworkManager-wait-online.service home.mount
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/bin/
+ExecStart=/usr/bin/autossh -M 60000 -NR 60122:localhost:22 ical@140.127.205.190
+Restart=always
+RestartSec=60
+User=ical
+Group=ical
+
+[Install]
+WantedBy=multi-user.target
+
