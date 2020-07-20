@@ -1,0 +1,12 @@
+[submodule "vim-plugins/YouCompleteMe"]
+	path = vim-plugins/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim-plugins/vim-autoformat"]
+	path = vim-plugins/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
+[submodule "vim-plugins/vim-better-whitespace"]
+	path = vim-plugins/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "vim-plugins/vim-prototxt"]
+	path = vim-plugins/vim-prototxt
+	url = https://github.com/chiphogg/vim-prototxt.git
