@@ -1,0 +1,16 @@
+[Unit]
+Description=Run tmux on boot.
+After=NetworkManager-wait-online.service network.target network-online.target
+Wants=NetworkManager-wait-online.service network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/jeff/script
+ExecStart=/bin/bash -c ./tmux-on-boot.sh
+RemainAfterExit=yes
+User=jeff
+Group=jeff
+
+[Install]
+WantedBy=multi-user.target
+
