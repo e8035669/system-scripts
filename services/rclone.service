@@ -1,0 +1,15 @@
+[Unit]
+Description=ftp_ical (rclone)
+AssertPathIsDirectory=/mnt/rclone_media
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount \
+        --allow-other ftp_ical:home/rclone_media /mnt/rclone_media
+ExecStop=/bin/fusermount -u /mnt/rclone_media
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
+
