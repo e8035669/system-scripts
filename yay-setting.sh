@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay --answerclean All --answerdiff None --answeredit None --answerupgrade All --removemake --sudoloop --save
+yay --answerclean None --answerdiff None --answeredit None --answerupgrade All --removemake --sudoloop --save
