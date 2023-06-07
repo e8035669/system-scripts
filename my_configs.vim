@@ -1,4 +1,5 @@
-let g:ale_enabled = 0
+let g:ale_enabled = 1
+let g:ale_linters = {'python': ['pylint']}
 "let g:ycm_global_ycm_extra_conf = '/home/jeff/ycm_global_ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_semantic_triggers =  {
